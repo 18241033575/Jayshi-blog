@@ -1,0 +1,68 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 125%;
+}
+body {
+    font-family: PingFang SC,"Microsoft YaHei";
+    color: #666;
+    font-size: 0.7rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+    background: #f2f2f2;
+}
+li{
+    list-style: none;
+}
+a,a:hover{
+    color: #666;
+    text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+img{
+    border: none;
+}
+/*common Style*/
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+.container{
+    margin: 0 auto 1rem;
+    width: 60rem;
+}
+.listBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.listBox .lList{
+    width: 66%;
+    margin:1rem 2% 0 0;
+}
+.listBox .rList{
+    width: 32%;
+}
+
+
+
+

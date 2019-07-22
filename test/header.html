@@ -1,0 +1,57 @@
+<div class="header">
+    <div class="topBox">
+        <a href="" class="logo"><img src="static/images/Logo.png"/></a>
+        <div class="linkGroup">
+            <a class="showEwm" href="javascript:void(0)">
+                公众号&nbsp;<i class="iconfont icon-down"></i>
+                <div class="ewmBox"><img src="static/images/ewm.png" alt=""></div>
+            </a>
+            <a class="showEwm" href="javascript:void(0)">
+                新浪微博&nbsp;<i class="iconfont icon-down"></i>
+                <div class="ewmBox"><img src="static/images/ewm.png" alt=""></div>
+            </a>
+            <a class="showEwm" href="javascript:void(0)">
+                打赏&nbsp;<i class="iconfont icon-down"></i>
+                <div class="ewmBox"><img src="static/images/ewm.png" alt=""></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="navBox">
+    <div class="seaBox">
+        <div class="search">
+            <div class="seaBorder">
+                <input type="text" placeholder="请输入关键字进行搜索！">
+                <button><i class="iconfont icon-search"></i></button>
+            </div>
+        </div>
+        <div class="btnClose"><i class="iconfont icon-delete"></i></div>
+    </div>
+    <div class="inNav">
+        <ul>
+            <li class="active"><a href="index.shtml">首页</a></li>
+            <li><a href="list.shtml">jQuery</a></li>
+            <li><a href="list.shtml">HTML5</a></li>
+            <li><a href="list.shtml">GitHub</a></li>
+            <li><a href="list.shtml">VueJs</a></li>
+            <li><a href="list.shtml">JavaScript</a></li>
+            <li><a href="list.shtml">JavaSE</a></li>
+            <li><a href="list.shtml">JavaEE</a></li>
+        </ul>
+        <div class="btnSea"><i class="iconfont icon-search"></i></div>
+    </div>
+</div>
+<script>
+    $(".btnSea").click(function () {
+        $(this).parent(".inNav").hide();
+        $(this).parent(".inNav").siblings(".seaBox").css("display","flex");
+    });
+    $(".btnClose").click(function () {
+        $(this).parent(".seaBox").hide();
+        $(this).parent(".seaBox").siblings(".inNav").css("display","flex");
+    })
+</script>
+
+
+
+

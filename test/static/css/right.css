@@ -1,0 +1,84 @@
+/*========================今日热门=========================*/
+.rList .newPup{
+    margin-top: 1rem;
+    width: 100%;
+    padding:0 1rem;
+    box-sizing: border-box;
+    background: white;
+}
+.newPup h3{
+    padding-top: 1rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.2rem;
+    color: #333333;
+}
+.newPup a{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+    border-bottom: .05rem solid #e6e6e6;
+}
+.newPup a:last-child{
+    border-bottom: none;
+}
+.newPup h4{
+    font-weight: normal;
+    font-size: .8rem;
+    line-height: 1.1rem;
+}
+.newPup span{
+    margin-left: 4%;
+    display: block;
+    width: 32%;
+    height: 3.6rem;
+    overflow: hidden;
+}
+.newPup span img{
+    width: 100%;
+    height: 100%;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    -o-transition:all .5s;
+}
+.newPup a:hover img{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.newPup a:hover h4{
+    text-decoration: underline;
+}
+.newPup .w64{
+    width: 64%;
+}
+
+/*tag*/
+.rList .tagBox{
+    margin-top: 1rem;
+    width: 100%;
+    padding:0 1rem 1rem;
+    box-sizing: border-box;
+    background: white;
+    position: sticky;
+    top: 4rem;
+}
+.tagBox h3{
+    padding: 1rem 0 .5rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.2rem;
+    color: #333333;
+}
+.tagBox a{
+    display: inline-block;
+    padding: .3rem .5rem;
+    margin: .2rem .1rem;
+    border: .05rem solid #e6e6e6;
+}
+.tagBox a:hover{
+    color: #006ec8;
+}

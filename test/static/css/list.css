@@ -1,0 +1,84 @@
+/**/
+.lList .position{
+    width: 100%;
+    background: white;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+.lList a{
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    box-sizing: border-box;
+    background: white;
+    margin-bottom: 1rem;
+}
+.lList h3{
+    color: #333333;
+    width: 100%;
+    line-height: 1.6rem;
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+.lList .arcInfo{
+    font-size: .8rem;
+    line-height: 1.2rem;
+    color: #006ec8;
+    margin-left: -1rem;
+}
+.lList .arcInfo span{
+    padding: 0 1rem;
+    border-right: .05rem solid #e6e6e6;
+}
+.lList .arcInfo span:last-child{
+    border-right: none;
+}
+.lList .detail{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.lList .detail span{
+    display: block;
+    width: 24%;
+    height: 5.5rem;
+    overflow: hidden;
+    margin-left: 2%;
+}
+.lList .detail span img{
+    width: 100%;
+    height: 100%;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    -o-transition:all .5s;
+}
+.lList a:hover img{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.lList a:hover h3{
+    text-decoration: underline;
+}
+.lList .detail p{
+    line-height: 1.2rem;
+}
+.lList .detail .w74{
+    width: 74%;
+}
+.lList .loadMore{
+    width: 100%;
+    height: 2.4rem;
+    text-align: center;
+    line-height: 2.4rem;
+    background: white;
+    font-size: .8rem;
+    cursor: pointer;
+}

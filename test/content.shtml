@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>内容页</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/font/iconfont.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/content.css">
+    <link rel="stylesheet" href="static/css/right.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!--#include virtual="header.html"-->
+    <div class="container">
+        <!--列表-->
+        <div class="listBox">
+            <div class="lList">
+                <!--article star-->
+                <div class="article">
+                    <div class="arcTop">
+                        <h1>虎扑足球一周十佳球：看燃了~热鸟长途奔袭拉都拉不住，奇兵肖智盘泰国</h1>
+                        <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    </div>
+                    <div class="arcCon">
+                        <p>谁不做白日梦中的热带岛屿天堂探险呢？我们喜欢美丽的岛屿，温暖的蓝色水域，棕榈树和白色的沙子，并找到了最好的岛屿为您逃脱和放松。</p>
+                        <p>岛屿或小岛是任何一片被水包围的次大陆陆地.非常小的岛屿，如环礁上的紧急陆地特征，可以被称为小岛、滑雪场、珊瑚礁或钥匙。河流或湖泊岛屿上的一个岛屿可能被称为眼角或海岛，而沿海的一个小岛则被称为霍姆岛(Holm)。一组地理或地质相关的岛屿被称为群岛，例如菲律宾。</p>
+                        <p><img src="static/images/ibrahim-asad-132103.jpg" alt=""></p>
+                        <p>尽管有一座人工陆桥，一个岛屿可以这样描述；例如新加坡和它的堤道，以及各种荷兰三角洲岛屿，例如Ijsselmonde。有些地方甚至因历史原因而保留“岛屿”，因为它们是通过陆地桥梁或填埋场与更大的陆地相连，如康尼岛和科罗纳多岛，尽管这些都是严格联系在一起的岛屿。相反，当一片土地被人造运河从大陆隔开时，例如从美国运河建造到环绕该地区的哈莱姆河期间，曼哈顿北部科林斯运河或大理石山的伯罗奔尼撒岛，一般不被认为是一个岛屿。</p>
+                        <p><img src="static/images/frank-mckenna-220448.jpg" alt=""></p>
+                        <p>海洋中有两种主要类型的岛屿：大陆岛屿和海洋岛屿。也有人工岛。</p>
+                        <h3>热带岛屿</h3>
+                        <p>大约有45 000个热带岛屿，面积至少5公顷(12英亩)。从珊瑚礁形成的例子包括马尔代夫、汤加、萨摩亚、瑙鲁和波利尼西亚。花岗岩岛屿包括塞舌尔和蒂曼，以及圣赫勒拿等火山岛。</p>
+                        <p>热带岛屿的社会经济多样性从马达加斯加、婆罗洲和巴布亚新几内亚内陆的石器时代社会，到新加坡和香港等城市岛屿的高科技生活方式。</p>
+                        <p><img src="static/images/denys-nevozhai-185489.jpg" alt=""/></p>
+                    </div>
+                    <div class="arcTag">
+                        Tag:
+                        <a href="taglist.shtml">旅游</a>
+                        <a href="taglist.shtml">海岛</a>
+                        <a href="taglist.shtml">沙滩</a>
+                        <a href="taglist.shtml">海</a>
+                    </div>
+                </div>
+                <!--article end-->
+            </div>
+
+            <!--right-->
+            <div class="rList">
+                <!--#include virtual="right.html"-->
+            </div>
+        </div>
+    </div>
+    <!--#include virtual="footer.html"-->
+</body>
+</html>

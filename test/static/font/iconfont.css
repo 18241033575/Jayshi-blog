@@ -1,0 +1,88 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9 */
+  src: url('iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff2') format('woff2'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1548061271056#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-position:before {
+  content: "\e61f";
+}
+
+.icon-dianhua:before {
+  content: "\e601";
+}
+
+.icon-add:before {
+  content: "\e604";
+}
+
+.icon-search:before {
+  content: "\e605";
+}
+
+.icon-menu:before {
+  content: "\e606";
+}
+
+.icon-edit:before {
+  content: "\e609";
+}
+
+.icon-down:before {
+  content: "\e60b";
+}
+
+.icon-left:before {
+  content: "\e60c";
+}
+
+.icon-right:before {
+  content: "\e60e";
+}
+
+.icon-top:before {
+  content: "\e60f";
+}
+
+.icon-loading:before {
+  content: "\e610";
+}
+
+.icon-doubt:before {
+  content: "\e611";
+}
+
+.icon-delete:before {
+  content: "\e612";
+}
+
+.icon-cus-service:before {
+  content: "\e616";
+}
+
+.icon-follow:before {
+  content: "\e617";
+}
+
+.icon-phone:before {
+  content: "\e618";
+}
+
+.icon-email:before {
+  content: "\e619";
+}
+
+.icon-cellphone:before {
+  content: "\e61a";
+}
+

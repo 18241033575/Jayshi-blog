@@ -1,0 +1,64 @@
+.article{
+    width: 100%;
+    background: white;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+}
+.article .arcTop{
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+.article .arcTop h1{
+    font-size: 1.6rem;
+    color: #333333;
+    line-height: 2.4rem;
+    padding: .5rem 0;
+    box-sizing: border-box;
+}
+.article .arcTop .arcInfo{
+    font-size: .8rem;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    line-height: 1.2rem;
+    color: #006ec8;
+    margin-left: -1rem;
+}
+.article .arcTop .arcInfo span{
+    padding: 0 1rem;
+    border-right: .05rem solid #e6e6e6;
+}
+.article .arcTop .arcInfo span:last-child{
+    border-right: none;
+}
+.article .arcCon{
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+.article .arcCon h3,h4,h5,h6{
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    line-height: 1.4rem;
+}
+.article .arcCon p{
+    font-size: .8rem;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    line-height: 1.4rem;
+}
+.article .arcCon img{
+    width: 100%;
+    border-radius: .25rem;
+}
+.article .arcTag{
+    height: 2rem;
+    line-height: 2rem;
+    padding: .5rem 0;
+    box-sizing: border-box;
+    border-top: .05rem solid #e6e6e6;
+}
+.article .arcTag a{
+    color: #006ec8;
+}

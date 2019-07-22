@@ -1,0 +1,32 @@
+.footer{
+    width: 100%;
+    height: 8rem;
+    background: white;
+}
+.footer .fInBox{
+    width: 58.5rem;
+    height: 100%;
+    margin: 0 auto;
+}
+.fInBox .fLink{
+    padding-top: 1.8rem;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.fLink a{
+    display: inline-block;
+    line-height: 2.4rem;
+    padding: 0 1rem;
+    font-size: .8rem;
+}
+.fLink a:hover{
+    color: #006ec8;
+}
+.fInBox p{
+    text-align: center;
+    line-height: 1.8rem;
+}
+.fInBox p a:hover{
+    color: #006ec8;
+}

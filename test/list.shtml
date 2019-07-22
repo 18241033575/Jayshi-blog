@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>列表页</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/font/iconfont.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/list.css">
+    <link rel="stylesheet" href="static/css/right.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <script src="static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!--#include virtual="header.html"-->
+    <div class="container">
+        <!--列表-->
+        <div class="listBox">
+            <div class="lList">
+                <a href="content.shtml">
+                    <h3>虎扑足球一周十佳球：看燃了~热鸟长途奔袭拉都拉不住，奇兵肖智盘泰国 </h3>
+                    <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    <div class="detail">
+                        <p class="w74">当半场结束，中国男足0-1落后的时候，当中国男足在亚洲男足赛事淘汰赛中，已经长达15年不能取胜之时，球队真的需要有人能够站出来，成为中国足球的脊梁。我们应该庆幸，33岁的肖智和38岁的郑智，还依旧能够带给球队根本性的帮助。两员老将在关键时刻的爆发，让中国男足绝境逃生，再一次逆转取胜，挺进八强。</p>
+                        <span><img src="static/images/005.jpg" alt=""></span>
+                    </div>
+                </a>
+                <a href="content.shtml">
+                    <h3>半场进攻简单粗暴，不起眼的“小金子”终于发光发亮！</h3>
+                    <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    <div class="detail">
+                        <p>本届亚洲杯的第二场逆转，中国队赢了，虽然是如此的艰难，但结果依然令人欣喜。对阵老对手泰国，双方之间都非常了解。上半场中国队打的过于急躁，对于身体对抗的优势过于自信，进攻简单粗暴，失误率很高，整体配合几乎没有章法。下半场在情况仍未好转的情况下，里皮再度用神奇的换人扭转了比赛局面。金敬道稳定了左路进攻，而肖智则一锤定音。最终中国队2-1逆转泰国，晋级本届亚洲杯八强！</p>
+                    </div>
+                </a>
+                <a href="content.shtml">
+                    <h3>半场进攻简单粗暴，不起眼的“小金子”终于发光发亮！</h3>
+                    <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    <div class="detail">
+                        <p>本届亚洲杯的第二场逆转，中国队赢了，虽然是如此的艰难，但结果依然令人欣喜。对阵老对手泰国，双方之间都非常了解。上半场中国队打的过于急躁，对于身体对抗的优势过于自信，进攻简单粗暴，失误率很高，整体配合几乎没有章法。下半场在情况仍未好转的情况下，里皮再度用神奇的换人扭转了比赛局面。金敬道稳定了左路进攻，而肖智则一锤定音。最终中国队2-1逆转泰国，晋级本届亚洲杯八强！</p>
+                    </div>
+                </a>
+                <a href="content.shtml">
+                    <h3>虎扑足球一周十佳球：看燃了~热鸟长途奔袭拉都拉不住，奇兵肖智盘泰国 </h3>
+                    <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    <div class="detail">
+                        <p class="w74">当半场结束，中国男足0-1落后的时候，当中国男足在亚洲男足赛事淘汰赛中，已经长达15年不能取胜之时，球队真的需要有人能够站出来，成为中国足球的脊梁。我们应该庆幸，33岁的肖智和38岁的郑智，还依旧能够带给球队根本性的帮助。两员老将在关键时刻的爆发，让中国男足绝境逃生，再一次逆转取胜，挺进八强。</p>
+                        <span><img src="static/images/005.jpg" alt=""></span>
+                    </div>
+                </a>
+                <a href="content.shtml">
+                    <h3>虎扑足球一周十佳球：看燃了~热鸟长途奔袭拉都拉不住，奇兵肖智盘泰国 </h3>
+                    <p class="arcInfo"><span>12月11, 2018</span><span>171回复</span><span>78赞</span></p>
+                    <div class="detail">
+                        <p class="w74">当半场结束，中国男足0-1落后的时候，当中国男足在亚洲男足赛事淘汰赛中，已经长达15年不能取胜之时，球队真的需要有人能够站出来，成为中国足球的脊梁。我们应该庆幸，33岁的肖智和38岁的郑智，还依旧能够带给球队根本性的帮助。两员老将在关键时刻的爆发，让中国男足绝境逃生，再一次逆转取胜，挺进八强。</p>
+                        <span><img src="static/images/005.jpg" alt=""></span>
+                    </div>
+                </a>
+                <div class="loadMore">
+                    点击加载更多...
+                </div>
+            </div>
+
+            <!--right-->
+            <div class="rList">
+                <!--#include virtual="right.html"-->
+            </div>
+        </div>
+    </div>
+    <!--#include virtual="footer.html"-->
+</body>
+</html>
