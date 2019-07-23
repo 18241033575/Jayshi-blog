@@ -37,6 +37,9 @@
         <span slot="title">导航四</span>
       </el-menu-item>
     </el-menu>
+    <el-calendar v-model="value">
+
+    </el-calendar>
   </div>
 </template>
 
@@ -45,7 +48,8 @@
     name: "Aside",
     data() {
       return {
-        isCollapse: true
+        isCollapse: true,
+        value: new Date()
       };
     },
     methods: {

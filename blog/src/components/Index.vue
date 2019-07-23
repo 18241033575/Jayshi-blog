@@ -2,15 +2,20 @@
   <!-- 首页 -->
   <div id="main">
     <head-nav></head-nav>
-    Hello Word!
+    <aside-content></aside-content>
+    <foot-nav></foot-nav>
   </div>
 </template>
 
 <script>
   import headNav from './Header/Header';
+  import asideContent from './Aside/Aside';
+  import footNav from './Footer/Footer';
   export default {
     components:{
-        headNav
+        headNav,
+        asideContent,
+        footNav,
     },
     name: "Index"
   }
