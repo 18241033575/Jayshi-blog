@@ -52,4 +52,9 @@ export default {
     border-radius: 5px;
     overflow: hidden;
   }
+  .com_style{
+    margin: 80px auto 120px;
+    width: 100%;
+    max-width: 1180px;
+  }
 </style>
