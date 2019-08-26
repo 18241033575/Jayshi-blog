@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/src/components/AboutMe/AboutMe.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/ArticleDet/ArticleDet.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/ArticleList/ArticleList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/ConmandArticle/Conmand.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/RightAside/Aside.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/Template/article_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/src/components/Test/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/router/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -180,7 +167,7 @@
       <path value="$PROJECT_DIR$/blog/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="427" />
     <option name="y" value="16" />
     <option name="width" value="1455" />
@@ -322,15 +309,15 @@
       <updated>1563863682215</updated>
       <workItem from="1563863685347" duration="4179000" />
       <workItem from="1566610021976" duration="17402000" />
-      <workItem from="1566782654802" duration="11712000" />
+      <workItem from="1566782654802" duration="12301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33293000" />
+    <option name="totallyTimeSpent" value="33882000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
