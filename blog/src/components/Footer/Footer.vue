@@ -3,7 +3,7 @@
   <div id="foot">
     <div class="foot_box">
       <p class="cp">Copyright © 2019 - Jayshi Blog. All Rights Reserved</p>
-      <p>
+      <p style="margin: 5px 0">
         <router-link to="">
           条款和免责
         </router-link>
