@@ -4,6 +4,8 @@ import Index from '@/components/Index'
 import ArticleList from '@/components/ArticleList/ArticleList'
 import AboutMe from '@/components/AboutMe/AboutMe'
 import Test from '@/components/Test/Test'
+import Login from '@/components/Common/Login'
+import Register from '@/components/Common/Register'
 
 
 import HeaderTop from '@/components/Header/Header'
@@ -37,6 +39,16 @@ export default new Router({
       path: '/test',
       name: 'Test',
       component: Test
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 })

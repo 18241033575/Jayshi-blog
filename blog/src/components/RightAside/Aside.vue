@@ -1,5 +1,6 @@
 <template>
   <div class="right">
+
     <div class="top_avatar border_ra5">
       <img src="/static/images/avatar.jpg" alt="">
       <p class="name">Jayshi</p>
@@ -7,6 +8,10 @@
         <el-button type="primary" size="small" round>关注</el-button>
         <el-button type="success" size="small" round @click="to_me">了解</el-button>
       </el-row>
+    </div>
+    <div class="notice border_ra5">
+      <span>博客公告:</span>
+      <p><i class="el-icon-chat-dot-square"></i>欢迎来到Jayshi的博客，这是一些后台传过来的信息(本网站未对IE浏览器做任何处理，包括提示，个人样式在浏览器显示还算OK，框架样式会发生兼容问题，基础不支持的也会发生兼容问题，如：IE9不会支持渐变)，当前博客版本1.0.1</p>
     </div>
     <div class="calender border_ra5">
       <el-calendar>
@@ -34,6 +39,33 @@
     margin: 10px auto 0;
     width: 30%;
     min-width: 320px;
+  }
+  .right .notice{
+    margin-top: 20px;
+    padding: 20px 15px;
+    background-color: #ffffff;
+    font-size: 12px;
+    color: #999999;
+    line-height: 18px;
+  }
+  .notice span{
+    font-size: 14px;
+    color: #666666;
+  }
+  .notice span:before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 18px;
+    margin-left: -10px;
+    border-radius: 0 5px 5px 0;
+    background-color: #83e1f7;
+  }
+  .notice p{
+    letter-spacing: 1px;
+  }
+  .notice i{
+    margin-right: 5px;
   }
   .right .top_avatar{
     width: 100%;

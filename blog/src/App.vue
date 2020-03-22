@@ -57,4 +57,9 @@ export default {
     width: 100%;
     max-width: 1180px;
   }
+  .to_other{
+    text-align: right;
+    font-size: 14px;
+    color: #999999;
+  }
 </style>

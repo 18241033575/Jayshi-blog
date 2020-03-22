@@ -13,7 +13,7 @@
            <router-link v-show="login_sign" to="login">
              登录
            </router-link>
-           <router-link v-show="login_sign" class="reg" to="login">
+           <router-link v-show="login_sign" class="reg" to="register">
              注册
            </router-link>
          </div>
