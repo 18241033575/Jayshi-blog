@@ -47,6 +47,15 @@
       handleSelect(key, keyPath) {
         // console.log(key, keyPath);
       }
+    },
+    created() {
+      this.$axios.get('/api/category')
+        .then(res => {
+          console.log(res);
+          if (res.data.data === 200) {
+            
+          }
+        })
     }
   }
 </script>
