@@ -31,7 +31,7 @@ export default new Router({
       component: AboutMe
     },
     {
-      path: '/article',
+      path: '/articles',
       name: 'ArticleList',
       component: ArticleList
     },
