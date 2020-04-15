@@ -1,6 +1,6 @@
 <template>
   <div id="menu">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
       <el-menu-item v-for="(item,index) in menuData" :index="JSON.stringify(index+1)" :key="index">
         <router-link :to="(item.sign?item.url+'?part='+item.sign:item.url)">{{ item.name }}</router-link>
       </el-menu-item>
@@ -19,41 +19,35 @@
             name: '首页',
             url: '/',
             sign: ''
-          },
-          {
-            name: 'Html/Css',
-            url: '/article',
-            sign: 'html-css'
-          },
-          {
-            name: 'JavaScript',
-            url: '/test',
-            sign: 'javascript'
-          },
-          {
-            name: 'Node',
-            url: '/article',
-            sign: 'node'
-          },
-          {
-            name: '关于我的',
-            url: '/about_me',
-            sign: 'about'
-          },
+          }
         ]
       }
     },
     methods: {
-      handleSelect(key, keyPath) {
+     /* handleSelect(key, keyPath) {
         // console.log(key, keyPath);
-      }
+        console.log(res);
+
+      }*/
     },
     created() {
       this.$axios.get('/api/category')
         .then(res => {
           console.log(res);
-          if (res.data.data === 200) {
-
+          if (res.data.code === 200) {
+            let data = res.data.data
+            for (let item of data) {
+              let midData = {};
+              midData.name = item.value;
+              midData.url = '/articles';
+              midData.sign = item.value;
+              this.menuData.push(midData)
+            }
+            this.menuData.push({
+              name: '关于我的',
+              url: '/about_me',
+              sign: ''
+            })
           }
         })
     }

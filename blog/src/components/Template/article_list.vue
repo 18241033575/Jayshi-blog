@@ -5,24 +5,15 @@
         <h3>热门文章</h3>
       </div>
       <div class="articles">
-        <div class="cell">
+        <div class="cell"  v-for="(item, index) in articleList" :key="index" @click="artDet(item.title)">
           <div class="cell_img">
             <img src="/static/images/logo.png" alt="">
           </div>
           <div class="cell_msg">
-            <h4 class="ellipsis">设计模式-单例模式</h4>
+            <h4 class="ellipsis">{{ item.title }}</h4>
             <p class="desc">单例模式的深入了解</p>
-            <p class="tips"><span>前端</span><span>前端</span><span>前端</span><span>前端</span><span>前端</span></p>
-          </div>
-        </div>
-        <div class="cell">
-          <div class="cell_img">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="cell_msg">
-            <h4 class="ellipsis">设计模式-单例模式</h4>
-            <p class="desc">单例模式的深入了解</p>
-            <p class="tips"><span>前端</span><span>前端</span><span>前端</span><span>前端</span><span>前端</span></p>
+              <span v-for="tag in item.tags.split(',')">{{ tag }}</span>
+            <p class="tips"></p>
           </div>
         </div>
       </div>
@@ -31,7 +22,25 @@
 
 <script>
     export default {
-        name: "article_list"
+        name: "article_list",
+        data() {
+          return {
+            articleList: []
+          }
+        },
+      methods: {
+        artDet(title) {
+          this.$router.push({name: 'ArticleDet', params: { title }})
+        }
+      },
+      created() {
+        this.$axios.get('/api/articles')
+          .then(res => {
+            if (res.data.code === 200) {
+              this.articleList = res.data.data
+            }
+          })
+      }
     }
 </script>
 
@@ -73,6 +82,9 @@
     width: 100%;
     height: 100%;
     transition: .5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
   .cell .cell_img img:hover {
     transform: scale(1.2);
