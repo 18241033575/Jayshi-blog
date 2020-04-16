@@ -1,5 +1,5 @@
 <template>
-    <div class="article_part">
+    <div class="article_part"  v-loading="loading">
       <div class="part_title">
         <i class="el-icon-star-on"></i>
         <h3>热门文章</h3>
@@ -23,9 +23,12 @@
 <script>
     export default {
         name: "article_list",
+        props: {sign: String},
         data() {
           return {
-            articleList: []
+            articleList: [],
+            tag: this.sign,
+            loading: true
           }
         },
       methods: {
@@ -34,12 +37,25 @@
         }
       },
       created() {
-        this.$axios.get('/api/articles')
-          .then(res => {
-            if (res.data.code === 200) {
-              this.articleList = res.data.data
-            }
-          })
+        console.log(this.tag);
+        if (this.tag) {
+          this.$axios.get('/api/articles?tag=' + this.tag)
+            .then(res => {
+              if (res.data.code === 200) {
+                this.loading = false;
+                this.articleList = res.data.data
+              }
+            })
+        }else {
+          this.$axios.get('/api/articles')
+            .then(res => {
+              if (res.data.code === 200) {
+                this.loading = false;
+                this.articleList = res.data.data
+              }
+            })
+        }
+
       }
     }
 </script>

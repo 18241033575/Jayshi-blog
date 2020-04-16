@@ -7,6 +7,7 @@
     <div class="content" v-html="article.content">
 
     </div>
+    {{ sign }}
   </div>
 </template>
 
