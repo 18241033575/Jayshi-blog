@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/blog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/components/Template/article_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Template/article_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/router/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -173,7 +168,7 @@
       <path value="$PROJECT_DIR$/blog/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="50" />
     <option name="y" value="75" />
     <option name="width" value="1779" />
@@ -305,12 +300,12 @@
       <workItem from="1575858435864" duration="6000" />
       <workItem from="1586824080686" duration="466000" />
       <workItem from="1586825123294" duration="2998000" />
-      <workItem from="1586866144421" duration="4643000" />
+      <workItem from="1586866144421" duration="5242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55149000" />
+    <option name="totallyTimeSpent" value="55748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
