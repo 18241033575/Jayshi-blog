@@ -62,4 +62,8 @@ export default {
     font-size: 14px;
     color: #999999;
   }
+  /* 日历样式 */
+  .el-calendar-table .el-calendar-day {
+    height: auto;
+  }
 </style>

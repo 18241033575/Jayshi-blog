@@ -1,7 +1,7 @@
 <template>
   <!-- 文章列表 -->
   <div class="com_style article_list">
-    <article-list></article-list>
+    <article-list :sign="sign"></article-list>
   </div>
 </template>
 
@@ -11,7 +11,19 @@
       components:{
         articleList
       },
-      name: "ArticleList"
+      name: "ArticleList",
+      data() {
+        return {
+          sign: 'CSS3'
+        }
+      },
+      created() {
+        console.log(2);
+        let timer = setTimeout(() => {
+          this.sign = 'CSS3'
+          console.log(1);
+        }, 5000)
+      }
     }
 </script>
 

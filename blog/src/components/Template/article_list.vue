@@ -1,18 +1,18 @@
 <template>
-    <div class="article_part">
+    <div class="article_part"  v-loading="loading">
       <div class="part_title">
         <i class="el-icon-star-on"></i>
         <h3>热门文章</h3>
       </div>
       <div class="articles">
-        <div class="cell"  v-for="(item, index) in articleList" :key="index">
+        <div class="cell"  v-for="(item, index) in articleList" :key="index" @click="artDet(item.title)">
           <div class="cell_img">
             <img src="/static/images/logo.png" alt="">
           </div>
           <div class="cell_msg">
             <h4 class="ellipsis">{{ item.title }}</h4>
             <p class="desc">单例模式的深入了解</p>
-            <!--<span v-for="tag in item.tags.join(',')">{{ tag }}</span>-->
+              <span v-for="tag in item.tags.split(',')">{{ tag }}</span>
             <p class="tips"></p>
           </div>
         </div>
@@ -23,18 +23,39 @@
 <script>
     export default {
         name: "article_list",
+        props: {sign: String},
         data() {
           return {
-            articleList: []
+            articleList: [],
+            tag: this.sign,
+            loading: true
           }
         },
+      methods: {
+        artDet(title) {
+          this.$router.push({name: 'ArticleDet', params: { title }})
+        }
+      },
       created() {
-        this.$axios.get('/api/articles')
-          .then(res => {
-            if (res.data.code === 200) {
-              this.articleList = res.data.data
-            }
-          })
+        console.log(this.tag);
+        if (this.tag) {
+          this.$axios.get('/api/articles?tag=' + this.tag)
+            .then(res => {
+              if (res.data.code === 200) {
+                this.loading = false;
+                this.articleList = res.data.data
+              }
+            })
+        }else {
+          this.$axios.get('/api/articles')
+            .then(res => {
+              if (res.data.code === 200) {
+                this.loading = false;
+                this.articleList = res.data.data
+              }
+            })
+        }
+
       }
     }
 </script>

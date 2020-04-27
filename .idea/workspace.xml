@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="" />
+=======
+    <list default="true" id="1d1ac3e0-e26b-4d06-a08c-fc910e86f3d6" name="Default" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/blog/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Menu/Menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/components/Template/article_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/components/Template/article_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/router/index.js" afterDir="false" />
+>>>>>>> 24cb72d743217eb2a73dfe0d698042442391df33
+    </list>
+>>>>>>> 976bc0178713f9c14619b0604de051c6b22fcde0
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -100,8 +113,13 @@
       <file leaf-file-name="Menu.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/src/components/Menu/Menu.vue">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="1140">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+=======
             <state relative-caret-position="216">
               <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="50" selection-end-column="10" />
+>>>>>>> 24cb72d743217eb2a73dfe0d698042442391df33
             </state>
           </provider>
         </entry>
@@ -168,11 +186,23 @@
       <path value="$PROJECT_DIR$/blog/package.json" />
     </packageJsonPaths>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="7">
+=======
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="317" />
+    <option name="y" value="19" />
+    <option name="width" value="1399" />
+    <option name="height" value="1047" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+>>>>>>> 976bc0178713f9c14619b0604de051c6b22fcde0
     <option name="x" value="50" />
     <option name="y" value="75" />
     <option name="width" value="1779" />
     <option name="height" value="980" />
+>>>>>>> 24cb72d743217eb2a73dfe0d698042442391df33
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -308,8 +338,12 @@
     <option name="totallyTimeSpent" value="55748000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="-8" y="-8" width="2064" height="1056" extended-state="7" />
+=======
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
+>>>>>>> 24cb72d743217eb2a73dfe0d698042442391df33
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2065332" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -652,6 +686,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/src/components/Menu/Menu.vue">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1140">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+=======
         <state relative-caret-position="216">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="50" selection-end-column="10" />
         </state>
@@ -678,6 +716,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
+>>>>>>> 24cb72d743217eb2a73dfe0d698042442391df33
         </state>
       </provider>
     </entry>
