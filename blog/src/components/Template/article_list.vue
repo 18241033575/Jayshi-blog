@@ -11,7 +11,7 @@
           </div>
           <div class="cell_msg">
             <h4 class="ellipsis">{{ item.title }}</h4>
-            <p class="desc">单例模式的深入了解</p>
+            <p class="desc">{{ item.intro }}</p>
               <span v-for="tag in item.tags.split(',')">{{ tag }}</span>
             <p class="tips"></p>
           </div>
