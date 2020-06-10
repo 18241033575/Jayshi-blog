@@ -3,7 +3,7 @@
     <h3>登录</h3>
     <el-form ref="form" :model="form" label-width="80px">
       <el-form-item label="账号">
-        <el-input v-model="form.account" type="text" minlength="6" maxlength="16" placeholder="请输入账号，长度6-16个字符"></el-input>
+        <el-input v-model="form.account" type="text" minlength="4" maxlength="16" placeholder="请输入账号，长度4-16个字符"></el-input>
       </el-form-item>
       <el-form-item label="密码">
         <el-input v-model="form.password" type="password" minlength="6" maxlength="16" placeholder="请输入密码，长度6-16个字符"></el-input>
@@ -19,6 +19,9 @@
 </template>
 
 <script>
+  import { message } from '../../../static/js/common';
+  import { mapState, mapActions, mapMutations, mapGetters } from 'vuex'
+  import store from '../../../vuex/store'
     export default {
         name: "Login",
       data() {
@@ -27,12 +30,61 @@
             account: '',
             password: '',
           },
+          subFormData: {},
+          btnFlag: true
         }
       },
+      store,
       methods: {
         onSubmit() {
-          console.log('submit!');
-        }
+          if (this.btnFlag) {
+            this.btnFlag = false;
+            this.subForm();
+            let timer = setTimeout(() => {
+              this.btnFlag = true;
+              clearTimeout(timer)
+            }, 2000)
+          }
+        },
+        // 表单提交
+        subForm() {
+          if (!this.form.account) {
+            message({_this: this, message: '请输入账号', type: 'error'});
+            return
+          }
+          if (this.form.account.length < 4) {
+            message({_this: this, message: '账号不得少于4个字符', type: 'error'});
+            return
+          }
+          if (!this.form.password) {
+            message({_this: this, message: '请输入密码', type: 'error'});
+            return
+          }
+          if (this.form.password.length < 6) {
+            message({_this: this, message: '密码不得少于6个字符', type: 'error'});
+            return
+          }
+          this.addAction();
+          this.subFormData.account = this.form.account;
+          console.log(this.form.password);
+          this.subFormData.password = this.$md5(this.form.password);
+          this.$axios.post('/api/blog_login', this.subFormData)
+            .then(res => {
+              if (res.data.code === 200) {
+                message({_this: this, message: res.data.msg, type: 'success'});
+                localStorage.setItem('USER', JSON.stringify(res.data.data));
+                let timer = setTimeout(() => {
+                  this.$router.push({name: 'Index'});
+                  clearTimeout(timer)
+                }, 2000)
+              }else {
+                message({_this: this, message: res.data.msg, type: 'error'});
+              }
+              this.reduceAction()
+            })
+        },
+        ...mapActions(['addAction','reduceAction']),
+        ...mapMutations(['add', 'reduce'])
       }
     }
 </script>

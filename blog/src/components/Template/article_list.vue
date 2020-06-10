@@ -1,5 +1,6 @@
 <template>
-    <div class="article_part"  v-loading="loading">
+  <!-- v-loading="loading" -->
+    <div class="article_part" >
       <div class="part_title">
         <i class="el-icon-star-on"></i>
         <h3>热门文章</h3>
@@ -12,8 +13,7 @@
           <div class="cell_msg">
             <h4 class="ellipsis">{{ item.title }}</h4>
             <p class="desc">{{ item.intro }}</p>
-              <span v-for="tag in item.tags.split(',')">{{ tag }}</span>
-            <p class="tips"></p>
+            <p class="tips"><span @click.stop="tags(tag)" v-for="tag in item.tags.split(',')">{{ tag }}</span></p>
           </div>
         </div>
       </div>
@@ -21,36 +21,44 @@
 </template>
 
 <script>
+  import { mapState, mapActions, mapMutations, mapGetters } from 'vuex'
+  import store from '../../../vuex/store'
     export default {
         name: "article_list",
         props: {sign: String},
         data() {
           return {
             articleList: [],
-            tag: this.sign,
+            tag: this.sign || 'HTML',
             loading: true
           }
         },
       methods: {
         artDet(title) {
           this.$router.push({name: 'ArticleDet', params: { title }})
-        }
+        },
+        tags(tag) {
+          this.$router.push({ path: '/articles?part=' + tag })
+        },
+        ...mapActions(['addAction','reduceAction']),
+        ...mapMutations(['add', 'reduce'])
       },
+      computed: mapState(["count"]),
+      store,
       created() {
-        console.log(this.tag);
         if (this.tag) {
+          this.addAction();
           this.$axios.get('/api/articles?tag=' + this.tag)
             .then(res => {
               if (res.data.code === 200) {
-                this.loading = false;
                 this.articleList = res.data.data
               }
+              this.reduceAction()
             })
         }else {
           this.$axios.get('/api/articles')
             .then(res => {
               if (res.data.code === 200) {
-                this.loading = false;
                 this.articleList = res.data.data
               }
             })

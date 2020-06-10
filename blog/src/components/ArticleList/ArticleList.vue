@@ -18,10 +18,8 @@
         }
       },
       created() {
-        console.log(2);
         let timer = setTimeout(() => {
-          this.sign = 'CSS3'
-          console.log(1);
+          this.sign = 'CSS3';
         }, 5000)
       }
     }

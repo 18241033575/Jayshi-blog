@@ -1,17 +1,16 @@
 <template>
   <div class="right">
-
     <div class="top_avatar border_ra5">
       <img src="/static/images/avatar.jpg" alt="">
       <p class="name">Jayshi</p>
       <el-row>
-        <el-button type="primary" size="small" round>关注</el-button>
-        <el-button type="success" size="small" round @click="to_me">了解</el-button>
+        <el-button :type="loginInfo.focus === 0 ? 'primary' : 'warning'" size="small" round @click="focus">关注</el-button>
+        <el-button type="success" size="small" round @click="toMe">了解</el-button>
       </el-row>
     </div>
     <div class="notice border_ra5">
       <span>博客公告:</span>
-      <p><i class="el-icon-chat-dot-square"></i>欢迎来到Jayshi的博客，这是一些后台传过来的信息(本网站未对IE浏览器做任何处理，包括提示，个人样式在浏览器显示还算OK，框架样式会发生兼容问题，基础不支持的也会发生兼容问题，如：IE9不会支持渐变)，当前博客版本1.0.1</p>
+      <p><i class="el-icon-chat-dot-square"></i>{{ notice }}</p>
     </div>
     <div class="calender border_ra5">
       <el-calendar>
@@ -23,11 +22,57 @@
 </template>
 
 <script>
-    export default {
+  import { message } from "../../../static/js/common";
+  export default {
         name: "Aside",
+      data() {
+          return {
+            notice: '',
+            loginInfo: {},
+            btnFlag: true
+          }
+      },
       methods:{
-        to_me() {
+        toMe() {
           this.$router.push({name: 'AboutMe'})
+        },
+        focus() {
+          if (this.btnFlag) {
+            this.btnFlag = false;
+            this.loginInfo.focus = this.loginInfo.focus === 0 ? 1 : 0;
+            this.$axios.post('/api/blog_focus', { account: this.loginInfo.account, focus: this.loginInfo.focus })
+              .then(res => {
+                console.log(res);
+                if (res.data.code === 200) {
+                  message({_this: this, message: this.loginInfo.focus === 0 ? '取消关注成功' : '关注成功', type: 'success'})
+                }else {
+                  message({_this: this, message: res.data.msg, type: 'error'})
+                }
+              });
+            let timer = setTimeout(() => {
+              this.btnFlag = true;
+              clearTimeout(timer)
+            }, 2000)
+          }
+
+        }
+      },
+      created() {
+        this.$axios.get('/api/netSetting')
+          .then(res => {
+            if (res.data.code === 200) {
+              res.data.data.forEach((item) => {
+                if (item.keyName === 'notice') {
+                  this.notice = item.value
+                }
+              });
+              localStorage.setItem('NETSETTING', JSON.stringify(res.data.data))
+            }
+          });
+
+        let login = localStorage.getItem('USER');
+        if (login) {
+          this.loginInfo = JSON.parse(login)
         }
       }
     }

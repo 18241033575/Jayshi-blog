@@ -3,19 +3,26 @@
        <div class="head_box">
           <div class="avatar">
             <router-link to="/">
-              <img src="/static/images/logo.png" alt=""><h3>Jayshi</h3>
+              <img src="/static/images/logo.png" alt="">
             </router-link>
           </div>
          <div class="login_group">
            <el-input placeholder="请输入内容" v-model="search" class="input-with-select">
              <el-button slot="append" icon="el-icon-search"></el-button>
            </el-input>
-           <router-link v-show="login_sign" to="login">
-             登录
-           </router-link>
-           <router-link v-show="login_sign" class="reg" to="register">
-             注册
-           </router-link>
+           <div class="group" v-show="!loginSign">
+             <router-link  to="login">
+               登录
+             </router-link>
+             <router-link  class="reg" to="register">
+               注册
+             </router-link>
+           </div>
+           <div class="avatar" v-show="loginSign">
+             <router-link to="/">
+               <img :src=" loginInfo.imageUrl || '/static/images/avatar.jpg'" alt=""><h3>Jayshi</h3>
+             </router-link>
+           </div>
          </div>
        </div>
     </div>
@@ -26,13 +33,20 @@
     name: "Header",
     data() {
       return {
-        login_sign: true,
-        search: ''
+        loginSign: true,
+        search: '',
+        loginInfo: {}
       };
     },
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      }
+    },
+    created() {
+      let login = localStorage.getItem('USER');
+      if (login) {
+        this.loginInfo = JSON.parse(login)
       }
     }
   }
@@ -82,6 +96,9 @@
   .login_group .el-input-group--append{
     margin-top: 10px;
     width: 100%;
+  }
+  .group {
+    display: flex;
   }
   .login_group input{
     width: 220px;

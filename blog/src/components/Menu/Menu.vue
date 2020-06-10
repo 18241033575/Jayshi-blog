@@ -33,7 +33,6 @@
     created() {
       this.$axios.get('/api/category')
         .then(res => {
-          console.log(res);
           if (res.data.code === 200) {
             let data = res.data.data
             for (let item of data) {

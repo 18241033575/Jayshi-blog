@@ -7,11 +7,12 @@
     <div class="content" v-html="article.content">
 
     </div>
-    {{ sign }}
   </div>
 </template>
 
 <script>
+  import store from '../../../vuex/store'
+  import { mapState, mapActions, mapMutations, mapGetters } from 'vuex'
   export default {
     name: "ArticleDet",
     data() {
@@ -19,14 +20,20 @@
         article: {}
       }
     },
+    methods: {
+      ...mapActions(['addAction','reduceAction']),
+      ...mapMutations(['add', 'reduce'])
+    },
+    store,
     created() {
       let title = this.$route.params.title;
-      console.log(title);
+      this.addAction();
       this.$axios.get('/api/articles?title=' + title)
         .then(res => {
           if (res.data.code === 200) {
             this.article = res.data.data[0]
           }
+          this.reduceAction();
         })
     }
   }
