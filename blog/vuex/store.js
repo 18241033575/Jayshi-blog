@@ -11,7 +11,7 @@ const state = {
   loginData: {}
 }
 const mutations = {
-  add(state, n) {
+  add(state) {
     state.count++;
     state.loading++;
   },
@@ -25,10 +25,6 @@ const mutations = {
 }
 
 // 同步处理变量
-
-
-
-
 */
 const getters = {
   count: function (state) {
@@ -36,7 +32,8 @@ const getters = {
   },
 
   loadingState: function (state) {
-    return state.loadingState = state.loading > 0;
+    console.log(state.loadingState = state.loading > 0);
+    return state.loadingState = state.loading > 0 ? true : false;
   },
 
   loading: function (state) {

@@ -24,6 +24,7 @@
       ...mapActions(['addAction','reduceAction']),
       ...mapMutations(['add', 'reduce'])
     },
+    computed: mapGetters(['count', 'loading', 'loadingState']),
     store,
     created() {
       let title = this.$route.params.title;

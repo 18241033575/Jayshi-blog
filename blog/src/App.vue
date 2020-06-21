@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app"  v-loading="loadingState">
     <Header-top></Header-top>
     <Footer-bottom></Footer-bottom>
     <router-view/>
@@ -9,12 +9,20 @@
 <script>
   import HeaderTop from './components/Header/Header';
   import FooterBottom from './components/Footer/Footer'
+  import store from '../vuex/store'
+  import {mapState, mapActions, mapMutations, mapGetters} from 'vuex'
 export default {
     components:{
       HeaderTop,
       FooterBottom
     },
-  name: 'App'
+  name: 'App',
+  methods: {
+    ...mapActions(['addAction', 'reduceAction']),
+    ...mapMutations(['add', 'reduce'])
+  },
+  store,
+  computed: mapGetters(['count', 'loading', 'loadingState']),
 }
 </script>
 
