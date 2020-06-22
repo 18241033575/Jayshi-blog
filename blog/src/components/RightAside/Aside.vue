@@ -42,9 +42,9 @@
             this.loginInfo.focus = this.loginInfo.focus === 0 ? 1 : 0;
             this.$axios.post('/api/blog_focus', { account: this.loginInfo.account, focus: this.loginInfo.focus })
               .then(res => {
-                console.log(res);
                 if (res.data.code === 200) {
-                  message({_this: this, message: this.loginInfo.focus === 0 ? '取消关注成功' : '关注成功', type: 'success'})
+                  message({_this: this, message: this.loginInfo.focus === 0 ? '取消关注成功' : '关注成功', type: 'success'});
+                  localStorage.setItem('USER', JSON.stringify(this.loginInfo))
                 }else {
                   message({_this: this, message: res.data.msg, type: 'error'})
                 }

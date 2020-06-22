@@ -4,7 +4,7 @@
         <i class="el-icon-star-on"></i>
         <h3>{{ this.title || '文章列表' }}</h3>
       </div>
-      <div class="articles">
+      <div class="articles" v-if="articleList.length">
         <div class="cell"  v-for="(item, index) in articleList" :key="index" @click="artDet(item.title)">
           <div class="cell_img">
             <img src="/static/images/logo.png" alt="">
@@ -16,6 +16,9 @@
           </div>
         </div>
       </div>
+      <div class="empty" v-if="!articleList.length">
+        暂无数据
+      </div>
     </div>
 </template>
 
@@ -26,7 +29,8 @@
         name: "article_list",
         props: {
           sign: String,
-          title: String
+          title: String,
+          hot: Boolean
         },
         data() {
           return {
@@ -50,7 +54,16 @@
             })
         },
         getData() {
-          if (this.tag) {
+          if (this.hot) {
+            this.addAction();
+            this.$axios.get('/api/articles?hot=' + this.hot)
+              .then(res => {
+                if (res.data.code === 200) {
+                  this.articleList = res.data.data
+                }
+                this.reduceAction()
+              })
+          }else if (this.tag) {
             this.addAction();
             this.$axios.get('/api/articles?tag=' + this.tag)
               .then(res => {
@@ -59,12 +72,14 @@
                 }
                 this.reduceAction()
               })
-          }else {
+          } else {
+            this.addAction();
             this.$axios.get('/api/articles')
               .then(res => {
                 if (res.data.code === 200) {
                   this.articleList = res.data.data
                 }
+                this.reduceAction()
               })
           }
 
@@ -158,5 +173,8 @@
   }
   .tips span:hover{
     border: 1px solid rgb(87, 157, 221);
+  }
+  .empty {
+    line-height: 48px;
   }
 </style>

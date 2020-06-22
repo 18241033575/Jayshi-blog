@@ -1,7 +1,7 @@
 <template>
   <!-- 文章列表推荐 -->
   <div class="left">
-    <article-list :title="'热门文章'"></article-list>
+    <article-list :title="'热门文章'" :hot="true"></article-list>
     <article-list :title="'文章列表'"></article-list>
   </div>
 </template>
