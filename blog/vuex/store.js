@@ -32,7 +32,6 @@ const getters = {
   },
 
   loadingState: function (state) {
-    console.log(state.loadingState = state.loading > 0);
     return state.loadingState = state.loading > 0 ? true : false;
   },
 

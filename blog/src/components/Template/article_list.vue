@@ -1,9 +1,8 @@
 <template>
-  <!-- v-loading="loading" -->
     <div class="article_part" >
       <div class="part_title">
         <i class="el-icon-star-on"></i>
-        <h3>热门文章</h3>
+        <h3>{{ this.title || '文章列表' }}</h3>
       </div>
       <div class="articles">
         <div class="cell"  v-for="(item, index) in articleList" :key="index" @click="artDet(item.title)">
@@ -25,28 +24,22 @@
   import store from '../../../vuex/store'
     export default {
         name: "article_list",
-        props: {sign: String},
+        props: {
+          sign: String,
+          title: String
+        },
         data() {
           return {
             articleList: [],
-            tag: this.sign || 'HTML',
-            loading: true
+            tag: this.sign || 'HTML'
           }
         },
       methods: {
         artDet(title) {
-          this.$router.push({name: 'ArticleDet', params: { title }})
+          this.$router.push({name: 'ArticleDet', params: { title }});
         },
         tags(tag) {
-          this.$router.push({ path: '/articles?part=' + tag })
-        },
-        ...mapActions(['addAction','reduceAction']),
-        ...mapMutations(['add', 'reduce'])
-      },
-      computed: mapState(["count"]),
-      store,
-      created() {
-        if (this.tag) {
+          this.$router.push({ path: '/articles?part=' + tag });
           this.addAction();
           this.$axios.get('/api/articles?tag=' + this.tag)
             .then(res => {
@@ -55,15 +48,41 @@
               }
               this.reduceAction()
             })
-        }else {
-          this.$axios.get('/api/articles')
-            .then(res => {
-              if (res.data.code === 200) {
-                this.articleList = res.data.data
-              }
-            })
-        }
+        },
+        getData() {
+          if (this.tag) {
+            this.addAction();
+            this.$axios.get('/api/articles?tag=' + this.tag)
+              .then(res => {
+                if (res.data.code === 200) {
+                  this.articleList = res.data.data
+                }
+                this.reduceAction()
+              })
+          }else {
+            this.$axios.get('/api/articles')
+              .then(res => {
+                if (res.data.code === 200) {
+                  this.articleList = res.data.data
+                }
+              })
+          }
 
+        },
+        ...mapActions(['addAction','reduceAction']),
+        ...mapMutations(['add', 'reduce'])
+      },
+      store,
+      created() {
+        this.getData()
+      },
+      watch: {
+        $route: {
+          handler() {
+            this.tag = this.$route.query.part;
+          },
+          deep: true
+        }
       }
     }
 </script>

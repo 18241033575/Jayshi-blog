@@ -1,6 +1,8 @@
 <template>
     <div id="me" class="com_style">
-      me
+      <!--<div class="content" v-html="article.content">
+        123456789
+      </div>-->
     </div>
 </template>
 

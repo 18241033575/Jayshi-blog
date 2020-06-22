@@ -18,9 +18,15 @@
         }
       },
       created() {
-        let timer = setTimeout(() => {
-          this.sign = 'CSS3';
-        }, 5000)
+        this.sign = this.$route.query.part;
+      },
+      watch: {
+        $route: {
+          handler() {
+            this.sign = this.$route.query.part;
+          },
+          deep: true
+        }
       }
     }
 </script>
